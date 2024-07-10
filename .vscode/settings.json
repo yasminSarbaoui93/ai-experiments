@@ -1,0 +1,5 @@
+{
+  "cSpell.words": ["CQRS", "dapr", "Dapr", "dtos", "Dtos", "wemogy", "Xunit"],
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.typeCheckingMode": "basic"
+}
