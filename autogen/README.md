@@ -32,7 +32,7 @@ export AGENTOPS_API_KEY="..." # optional
 
 ## Experiment: Interacting with a Database via SQL
 
-Give the agents the `run_query(sql: str)` function as a potential tool to call, and ask questions about the database, that require filtering via SQL queries.
+Give the agents the `run_query(sql: str)` and `get_tables()` functions as a potential tools to call, and ask questions about the database, that require filtering via SQL queries.
 
 ```bash
 python sql.py
