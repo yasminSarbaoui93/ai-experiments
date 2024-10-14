@@ -37,14 +37,15 @@ Two agents with different model configurations are telling each other jokes and 
 python comedians.py
 ```
 
+You can switch the model of one agent to a locally running model with ollama by commenting out one of `llm_config` lines and commenting in the other.
+
 ## Experiment: Draw stock charts
 
 An agent with **capabilities to write and execute code** should draw a chart of Tesla and NVIDIA stocks by **generating Python code to fetch the stock data and draw a chart**.
 
 ```bash
-python app.py
+python stocks.py
 ```
-
 
 ## Experiment: Interacting with a Database via SQL
 
