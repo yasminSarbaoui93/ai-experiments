@@ -27,12 +27,28 @@ Populate the environment variables
 ```bash
 export OPENAI_API_KEY="..."
 export AGENTOPS_API_KEY="..." # optional
-export AGENTOPS_API_KEY="..." # optional
 ```
+
+## Experiment: Comedians
+
+Two agents with different model configurations are telling each other jokes and are reacting on the joke of the other. One agent could be switched to a locally running model with ollama for a demo.
+
+```bash
+python comedians.py
+```
+
+## Experiment: Draw stock charts
+
+An agent with **capabilities to write and execute code** should draw a chart of Tesla and NVIDIA stocks by **generating Python code to fetch the stock data and draw a chart**.
+
+```bash
+python app.py
+```
+
 
 ## Experiment: Interacting with a Database via SQL
 
-Give the agents the `run_query(sql: str)` and `get_tables()` functions as a potential tools to call, and ask questions about the database, that require filtering via SQL queries.
+Give the agents the `run_query(sql: str)` and `get_tables()` functions as a potential tools to call for **Function Calling**, and ask questions about the database, that require filtering via SQL queries.
 
 ```bash
 python sql.py
