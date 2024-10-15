@@ -15,7 +15,7 @@ docker run \
     neo4j:5.24.0
 ```
 
-Run the llm-graph-builder project locally. For this, download the repository and create a `.env` file with the following content:
+Run the [llm-graph-builder](https://github.com/neo4j-labs/llm-graph-builder) project locally. For this, download the repository and create a `.env` file with the following content:
 
 ```
 VITE_LLM_MODELS="diffbot,openai-gpt-3.5,openai-gpt-4o"
