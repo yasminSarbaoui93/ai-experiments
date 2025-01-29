@@ -1,13 +1,13 @@
 import os
 from typing import Any
 import autogen
-import agentops
+# import agentops
 from autogen import AssistantAgent, UserProxyAgent, ConversableAgent, config_list_from_json, register_function
 import autogen.runtime_logging
 import sqlite3
 
-# Start tracing
-agentops.init(api_key=os.environ.get("AGENTOPS_API_KEY"), tags=["simple-autogen-example"])
+# # Start tracing
+# agentops.init(api_key=os.environ.get("AGENTOPS_API_KEY"), tags=["simple-autogen-example"])
 
 # Init database connection
 connection = sqlite3.connect("demo.db")
@@ -23,7 +23,7 @@ connection = sqlite3.connect("demo.db")
 # cursor.execute("INSERT INTO users (name, age, country_code) VALUES ('Linda', 30, 'US')")
 # cursor.execute("INSERT INTO users (name, age, country_code) VALUES ('Peter', 25, 'US')")
 # cursor.execute("INSERT INTO users (name, age, country_code) VALUES ('Alice', 27, 'US')")
-# cursor.execute("INSERT INTO users (name, age, country_code) VALUES ('Robin-Manuel', 33, 'DE')")
+# cursor.execute("INSERT INTO users (name, age, country_code) VALUES ('Frenk', 30, 'DE')")
 # connection.commit()
 
 
@@ -94,4 +94,4 @@ chat_result = user_proxy.initiate_chat(assistant, message="How many users are fr
 print(chat_result)
 
 # Stop tracing
-agentops.end_session("Success")
+# agentops.end_session("Success")
