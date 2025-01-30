@@ -1,10 +1,11 @@
 import os
 import autogen
-import agentops
+# import agentops
+import autogen.coding
 from autogen import AssistantAgent, UserProxyAgent
 
 llm_config = {"model": "gpt-4", "api_key": os.environ["OPENAI_API_KEY"]}
-agentops.init(api_key=os.environ.get("AGENTOPS_API_KEY"), tags=["simple-autogen-example"])
+# agentops.init(api_key=os.environ.get("AGENTOPS_API_KEY"), tags=["simple-autogen-example"])
 
 assistant = AssistantAgent("assistant", llm_config=llm_config)
 
@@ -19,4 +20,4 @@ result = user_proxy.initiate_chat(
 )
 
 print(result)
-agentops.end_session("Success")
+# agentops.end_session("Success")

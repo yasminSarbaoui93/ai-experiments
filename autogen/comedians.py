@@ -1,6 +1,6 @@
 import os
 import autogen
-import agentops
+# import agentops
 from autogen import AssistantAgent, UserProxyAgent, ConversableAgent, config_list_from_json
 import autogen.runtime_logging
 
@@ -8,7 +8,7 @@ import autogen.runtime_logging
 logging_session_id = autogen.runtime_logging.start(logger_type="sqlite", config={"dbname": "logs.db"})
 print("Logging session ID: " + str(logging_session_id))
 
-agentops.init(api_key=os.environ.get("AGENTOPS_API_KEY"), tags=["simple-autogen-example"])
+# agentops.init(api_key=os.environ.get("AGENTOPS_API_KEY"), tags=["simple-autogen-example"])
 # agentops.start_session(tags=["autogen-tool-example"])
 
 cathy = ConversableAgent(
@@ -28,5 +28,5 @@ joe = ConversableAgent(
 
 result = joe.initiate_chat(cathy, message="Cathy, tell me a joke.", max_turns=2)
 
-agentops.end_session("Success")
+# agentops.end_session("Success")
 autogen.runtime_logging.stop()
